@@ -1,0 +1,152 @@
+Testing instructions for the 4 digit poker programs in this
+repository.
+
+Read REFERENCES for information about the 4 digit poker test.
+
+--------
+
+Program by program testing instructions.
+
+Fibonacci random number generator
+
+Run fibopokr to apply the 4 digit poker test to the fibonacci
+random number generator.  There is no parameter.
+
+./fibopokr
+
+This program is expected to pass the test.
+
+--------
+
+64 bit LFSR random number generator
+
+Run lfsrpokr to apply the 4 digit poker test to the 64 bit
+LFSR random number generator.  There is no parameter.
+
+./lfsrpokr
+
+This program is expected to pass the test.
+
+--------
+
+32 bit RANDU random number generator
+
+Run randu to apply the 4 digit poker test to the 32 bit
+RANDU random number generator.  There is no parameter.
+
+./rupoker
+
+This program is expected to pass the test.
+
+--------
+
+Sine wave random number generator
+
+Run sinepokr to apply the 4 digit poker test to the sine
+wave random number generator.  There is no parameter.
+
+./sinepokr
+
+This program is expected to fail the test.
+
+--------
+
+eegl64 random number generator
+
+Run poker to apply the 4 digit poker test to the eegl64
+uniform random number generator.  There is one parameter.
+
+./poker
+
+This test is expected to pass the chi square test.
+
+--------
+
+etaus random number generator
+
+Run etauspokr to apply the 4 digit poker test to the etaus
+uniform random number generator.  There is no parameter.
+
+./etauspokr
+
+This test is expected to pass the chi square test.
+
+--------
+
+GNU Scientific Library random number generators
+
+
+Run tstgsl.sh to apply the 4 digit poker test to the GNU
+Scientific Library collection of random number generators.
+There is one parameter, the name of the GSL generator.
+
+./tstgsl.sh RNG_name 
+
+Where RNG_name is the name of the generator.
+
+Example:
+
+./tstgsl.sh taus2
+
+This example runs the 4 digit poker test on the GSL taus2
+random number generator.
+
+To find a list of valid GSL random number generators, enter
+a parameter that produces an error.
+
+./tstgsl.sh ?
+
+This test is expected to pass the chi square test for all
+the GSL generators.
+
+To run a test of all GSL generators, run runall.sh.
+
+./runall.sh
+
+Read the results of this test by browsing allgsl.out.
+This test reads allgsl.lst as an input file.
+
+--------
+
+Dieharder package random number generators
+
+Run tstdie.sh to apply the 4 digit poker test to the
+dieharder collection of random number generators.  There
+is one parameter, the id of the dieharder generator.
+
+./tstdie.sh RNG_number
+
+Example,
+
+./tstdie.sh 053
+
+This example runs the 4 digit poker test on the dieharder
+taus2 random number generator.
+
+To find a list of valid dieharder random number generators,
+enter the following dieharder command.
+
+dieharder -g -l
+
+This test is expected to pass the chi square test for all
+of the random number generators.
+
+To run a test of all dieharder generators, run dieall.sh.
+
+./dieall.sh
+
+Read the results of this test by browsing alldie.out.
+This test reads alldie.lst as an input file.
+
+--------
+
+Submit more random number generators.
+
+If you have a random number generator not included in this
+repository, you are welcome to add more 4 digit poker test 
+programs to this repository.
+
+--------
+
+Read REFERFENCES for information about the 4 digit poker test.
+Read INSTALL for installing this repository.
